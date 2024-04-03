@@ -1,0 +1,700 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+}
+
+b {
+    color: #ffffff;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 2px solid rgb(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 25px;
+}
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i {
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.i1 {
+    width: 6px;
+    height: 40px;
+}
+.i2 {
+    width: 3px;
+    height: 70px;
+}
+.i3 {
+    width: 2px;
+    height: 90px;
+} */
+
+/* .b1 {
+    animation: anime1 1s linear infinite;
+}
+.b2 {
+    animation: anime2 1s linear infinite;
+}
+.b3 {
+    animation: anime3 1s linear infinite;
+}
+.b4 {
+    animation: anime4 1s linear infinite;
+}
+.b5 {
+    animation: anime5 1s linear infinite;
+}
+.b6 {
+    animation: anime6 1s linear infinite;
+}
+.b7 {
+    animation: anime7 1s linear infinite;
+}
+.b8 {
+    animation: anime8 1s linear infinite;
+}
+.b9 {
+    animation: anime9 1s linear infinite;
+}
+.b10 {
+    animation: anime10 1s linear infinite;
+}
+.b11 {
+    animation: anime11 1s linear infinite;
+}
+.b12 {
+    animation: anime12 1s linear infinite;
+} */
+
+
+/* @keyframes anime1 {
+    0%{
+        color: rgb(0, 0, 0);
+    }
+    10% {
+        color: rgb(0, 0, 100);
+    }
+    20% {
+        color: rgb(0, 0, 200);
+    }
+    30% {
+        color: rgb(0, 0, 250);
+    } 
+    40% {
+        color: rgb(0, 100, 250);
+    }
+    50% {
+        color: rgb(0, 200, 250);
+    }
+    60% {
+        color: rgb(0, 250, 250);
+    }
+    70% {
+        color: rgb(100, 250, 250);
+    }
+    80% {
+        color: rgb(200, 250, 250);
+    }
+    90% {
+        color: rgb(250, 250, 250);
+    }
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime2 {
+    100%{
+        color: rgb(0, 0, 0);
+    }
+    0% {
+        color: rgb(0, 0, 100);
+    }
+    10% {
+        color: rgb(0, 0, 200);
+    }
+    20% {
+        color: rgb(0, 0, 250);
+    } 
+    30% {
+        color: rgb(0, 100, 250);
+    }
+    40% {
+        color: rgb(0, 200, 250);
+    }
+    50% {
+        color: rgb(0, 250, 250);
+    }
+    60% {
+        color: rgb(100, 250, 250);
+    }
+    70% {
+        color: rgb(200, 250, 250);
+    }
+    80% {
+        color: rgb(250, 250, 250);
+    }
+    90% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime3 {
+    90%{
+        color: rgb(0, 0, 0);
+    }
+    100% {
+        color: rgb(0, 0, 100);
+    }
+    0% {
+        color: rgb(0, 0, 200);
+    }
+    10% {
+        color: rgb(0, 0, 250);
+    } 
+    20% {
+        color: rgb(0, 100, 250);
+    }
+    30% {
+        color: rgb(0, 200, 250);
+    }
+    40% {
+        color: rgb(0, 250, 250);
+    }
+    50% {
+        color: rgb(100, 250, 250);
+    }
+    60% {
+        color: rgb(200, 250, 250);
+    }
+    70% {
+        color: rgb(250, 250, 250);
+    }
+    80% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime4 {
+    80%{
+        color: rgb(0, 0, 0);
+    }
+    90% {
+        color: rgb(0, 0, 100);
+    }
+    100% {
+        color: rgb(0, 0, 200);
+    }
+    0% {
+        color: rgb(0, 0, 250);
+    } 
+    10% {
+        color: rgb(0, 100, 250);
+    }
+    20% {
+        color: rgb(0, 200, 250);
+    }
+    30% {
+        color: rgb(0, 250, 250);
+    }
+    40% {
+        color: rgb(100, 250, 250);
+    }
+    50% {
+        color: rgb(200, 250, 250);
+    }
+    60% {
+        color: rgb(250, 250, 250);
+    }
+    70% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime5 {
+    70%{
+        color: rgb(0, 0, 0);
+    }
+    80% {
+        color: rgb(0, 0, 100);
+    }
+    90% {
+        color: rgb(0, 0, 200);
+    }
+    100% {
+        color: rgb(0, 0, 250);
+    } 
+    0% {
+        color: rgb(0, 100, 250);
+    }
+    10% {
+        color: rgb(0, 200, 250);
+    }
+    20% {
+        color: rgb(0, 250, 250);
+    }
+    30% {
+        color: rgb(100, 250, 250);
+    }
+    40% {
+        color: rgb(200, 250, 250);
+    }
+    50% {
+        color: rgb(250, 250, 250);
+    }
+    60% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime6 {
+    60%{
+        color: rgb(0, 0, 0);
+    }
+    70% {
+        color: rgb(0, 0, 100);
+    }
+    80% {
+        color: rgb(0, 0, 200);
+    }
+    90% {
+        color: rgb(0, 0, 250);
+    } 
+    100% {
+        color: rgb(0, 100, 250);
+    }
+    0% {
+        color: rgb(0, 200, 250);
+    }
+    10% {
+        color: rgb(0, 250, 250);
+    }
+    20% {
+        color: rgb(100, 250, 250);
+    }
+    30% {
+        color: rgb(200, 250, 250);
+    }
+    40% {
+        color: rgb(250, 250, 250);
+    }
+    50% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime7 {
+    50%{
+        color: rgb(0, 0, 0);
+    }
+    60% {
+        color: rgb(0, 0, 100);
+    }
+    70% {
+        color: rgb(0, 0, 200);
+    }
+    80% {
+        color: rgb(0, 0, 250);
+    } 
+    90% {
+        color: rgb(0, 100, 250);
+    }
+    100% {
+        color: rgb(0, 200, 250);
+    }
+    0% {
+        color: rgb(0, 250, 250);
+    }
+    10% {
+        color: rgb(100, 250, 250);
+    }
+    20% {
+        color: rgb(200, 250, 250);
+    }
+    30% {
+        color: rgb(250, 250, 250);
+    }
+    40% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime8 {
+    40%{
+        color: rgb(0, 0, 0);
+    }
+    50% {
+        color: rgb(0, 0, 100);
+    }
+    60% {
+        color: rgb(0, 0, 200);
+    }
+    70% {
+        color: rgb(0, 0, 250);
+    } 
+    80% {
+        color: rgb(0, 100, 250);
+    }
+    90% {
+        color: rgb(0, 200, 250);
+    }
+    100% {
+        color: rgb(0, 250, 250);
+    }
+    0% {
+        color: rgb(100, 250, 250);
+    }
+    10% {
+        color: rgb(200, 250, 250);
+    }
+    20% {
+        color: rgb(250, 250, 250);
+    }
+    30% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime9 {
+    30%{
+        color: rgb(0, 0, 0);
+    }
+    40% {
+        color: rgb(0, 0, 100);
+    }
+    50% {
+        color: rgb(0, 0, 200);
+    }
+    60% {
+        color: rgb(0, 0, 250);
+    } 
+    70% {
+        color: rgb(0, 100, 250);
+    }
+    80% {
+        color: rgb(0, 200, 250);
+    }
+    90% {
+        color: rgb(0, 250, 250);
+    }
+    100% {
+        color: rgb(100, 250, 250);
+    }
+    0% {
+        color: rgb(200, 250, 250);
+    }
+    10% {
+        color: rgb(250, 250, 250);
+    }
+    20% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime10 {
+    20%{
+        color: rgb(0, 0, 0);
+    }
+    30% {
+        color: rgb(0, 0, 100);
+    }
+    40% {
+        color: rgb(0, 0, 200);
+    }
+    50% {
+        color: rgb(0, 0, 250);
+    } 
+    60% {
+        color: rgb(0, 100, 250);
+    }
+    70% {
+        color: rgb(0, 200, 250);
+    }
+    80% {
+        color: rgb(0, 250, 250);
+    }
+    90% {
+        color: rgb(100, 250, 250);
+    }
+    100% {
+        color: rgb(200, 250, 250);
+    }
+    0% {
+        color: rgb(250, 250, 250);
+    }
+    10% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime11 {
+    10%{
+        color: rgb(0, 0, 0);
+    }
+    20% {
+        color: rgb(0, 0, 100);
+    }
+    30% {
+        color: rgb(0, 0, 200);
+    }
+    40% {
+        color: rgb(0, 0, 250);
+    } 
+    50% {
+        color: rgb(0, 100, 250);
+    }
+    60% {
+        color: rgb(0, 200, 250);
+    }
+    70% {
+        color: rgb(0, 250, 250);
+    }
+    80% {
+        color: rgb(100, 250, 250);
+    }
+    90% {
+        color: rgb(200, 250, 250);
+    }
+    100% {
+        color: rgb(250, 250, 250);
+    }
+    0% {
+        color: rgb(0, 0, 0);
+    }
+}
+@keyframes anime12 {
+    0%{
+        color: rgb(0, 0, 0);
+    }
+    10% {
+        color: rgb(0, 0, 100);
+    }
+    20% {
+        color: rgb(0, 0, 200);
+    }
+    30% {
+        color: rgb(0, 0, 250);
+    } 
+    40% {
+        color: rgb(0, 100, 250);
+    }
+    50% {
+        color: rgb(0, 200, 250);
+    }
+    60% {
+        color: rgb(0, 250, 250);
+    }
+    70% {
+        color: rgb(100, 250, 250);
+    }
+    80% {
+        color: rgb(200, 250, 250);
+    }
+    90% {
+        color: rgb(250, 250, 250);
+    }
+    100% {
+        color: rgb(0, 0, 0);
+    }
+} */
+
+
+
+
+/* --------------------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body, .time, .left-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digital-clock, .time{
+    position:relative;
+}
+body{
+    min-height: 80vh;
+    background-color: #2e2e45;
+}
+
+.digital-clock{
+    color: #fff;
+    background: #2d2f38;
+    width: 450px;
+    padding: 25px 45px;
+    border-radius: 10px;
+}
+.digital-clock:before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg,yellow,blue,red);
+    background-size: 200% 200%;
+    top:-5px;
+    left:-5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    filter: blur(30px);
+    animation: glowing 5s ease infinite;
+}
+
+@keyframes glowing{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+#hours{
+    font-weight: 600;
+    /* padding: 0 10px; */
+    line-height: 125px;
+    font-size: 8em;
+    background: -webkit-linear-gradient(90deg, blue,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.right-side{
+    margin-top: -20px;
+}
+#dots{
+    font-size: 6em;
+    
+    transform: translateY(-3px);
+    background: -webkit-linear-gradient(90deg, blue, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#minutes{
+    font-size: 8em;
+    line-height: 125px;
+    font-weight: 500;
+    margin-left: 10px;
+    transform: translateY(10px);
+    background: -webkit-linear-gradient(90deg, blue,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+.right-down{
+    margin-top: 50px;
+    margin-left: 25px;
+    transform: translateY(-25px);
+}
+#period, #seconds{
+    display: flex;
+    font-size: 2.9em ;
+    font-weight: 500;
+    margin-left: ;
+}
+#period{
+    background: -webkit-linear-gradient(90deg, blue,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#seconds{
+    background: -webkit-linear-gradient(90deg, blue,white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
