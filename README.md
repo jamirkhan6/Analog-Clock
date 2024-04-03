@@ -1,6 +1,4 @@
 # Analog-Clock
 This is my first Repository
 <br>
-jamir khan
-<br>
-md jamir uddin khan
+and i was excited
